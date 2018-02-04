@@ -89,17 +89,38 @@ public class Driver {
 			d.setFood(al.allocateFood(d.getFGID(), d.getServingSize()));
 		}
 		
+		showFinalResult(primaryList);
+		
+		System.out.println("Do you want an alternate list?");
+		System.out.println("Type Y for alternate list, Q for quit");
+		
+		String response = input.nextLine();
+		while(response.equalsIgnoreCase("y"))
+		{
+			for(Data d: primaryList)
+			{
+				d.setFood(al.allocateFood(d.getFGID(), d.getServingSize()));				
+			}
+			showFinalResult(primaryList);
+			System.out.println("Do you want an alternate list?");
+			System.out.println("Type Y for alternate list, Q for quit");
+			response = input.nextLine();
+		}
+	
+	}
+	
+	public static void showFinalResult(List<Data> aList)
+	{
 		System.out.println();
 		System.out.println("------Output-----");
 		System.out.println();
 		
-		for(Data d : primaryList)
+		for(Data d : aList)
 		{
 			System.out.println(d);
 			d.display();
 			System.out.println();
 		}
-	
 	}
 
 }

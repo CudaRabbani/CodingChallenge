@@ -1,7 +1,7 @@
 This program is written assuming correct input has been given. The main function is located inside the Driver class.
-In order to get the alternative list please run the program again. It will automatically generate new random food list.
+In order to get the alternative list please run the program again. It will automatically generate new random food list. 
 To run the program please follow the instruction written below:
-
+	1. Make sure the data files are kept under the same directory of the source code and they are residing in directory named "Data"
 For ubuntu:
 	1. Download the the repository.
 	2. In ubuntu open a terminal and go the project directory.
